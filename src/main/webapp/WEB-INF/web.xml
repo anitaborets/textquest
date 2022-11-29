@@ -1,0 +1,48 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app version="3.1"  xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+  <listener>
+    <listener-class>main.LogInit</listener-class>
+  </listener>
+
+  <servlet>
+    <servlet-name>count</servlet-name>
+    <servlet-class>main.CountServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>count</servlet-name>
+    <url-pattern>/count</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>logic</servlet-name>
+    <servlet-class>main.LogicServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>logic</servlet-name>
+    <url-pattern>/logic</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/images/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>HelloImage</servlet-name>
+    <servlet-class>main.HelloImage</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HelloImage</servlet-name>
+    <url-pattern>/HelloImage</url-pattern>
+  </servlet-mapping>
+
+</web-app>
